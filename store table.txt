@@ -1,0 +1,22 @@
+create table store (id integer, product text, quantity integer, expiry_date numeric, section text, aisle integer);
+
+
+insert into store values (1, 'lemon', 12, 2018, 'fruits', 13);
+
+insert into store values (2, 'banana', 56, 2018, 'fruits', 15);
+
+insert into store values (3, 'plate', 34, 2050, 'kitchen', 6);
+
+insert into store values (4, 'beer', 200, 2020, 'alkohol', 25);
+
+insert into store values (5, 'jack_daniels', 100, 2050, 'alkohol', 30);
+
+
+
+select * from store;
+
+select * from store order by section;
+
+select * from store where section='fruits';
+
+select section, sum(quantity) from store where section='fruits'
